@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".AdjustTabsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBackground"
+        app:titleTextColor="@color/white"
+        app:navigationIconTint="@color/white"
+        android:elevation="8dp"
+        app:title="Adjust Tabs Order" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12sp"
+        android:layout_margin="10sp"
+        android:gravity="center"
+        android:background="@drawable/tab_bg"
+        android:textColor="@color/white"
+        android:lineHeight="25sp"
+        android:text="Long press the item to move to the top position" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tabsRC"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="12sp"
+        android:paddingTop="12sp"
+        tools:listitem="@layout/drag_tabs_layout"/>
+
+</LinearLayout>

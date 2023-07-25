@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".SearchResultActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBackground"
+        android:elevation="8sp"
+        app:titleTextColor="@color/white"
+        app:navigationIconTint="@color/white"
+        app:title="Tv Player" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Result"
+        android:padding="12sp"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"
+        android:layout_margin="12sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/channel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        app:cardCornerRadius="8sp"
+        app:cardBackgroundColor="@color/colorBackground"
+        app:cardElevation="8sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="Hello World"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/favrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:padding="10sp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/nav_bg"
+                android:background="@drawable/tab_bg"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_favorite_border"
+                app:tint="@color/orange" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suggested Channels"
+        android:padding="12sp"
+        android:layout_marginTop="12sp"
+        android:visibility="gone"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"
+        android:layout_margin="12sp" />
+
+
+</LinearLayout>

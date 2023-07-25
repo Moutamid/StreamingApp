@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6sp"
+    android:background="@drawable/item_selector"
+    android:clickable="true"
+    app:cardBackgroundColor="@color/tab_bg"
+    android:defaultFocusHighlightEnabled="true"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="false"
+    android:focusedByDefault="true"
+    android:screenReaderFocusable="true"
+    app:cardCornerRadius="8sp"
+    app:cardElevation="8sp"
+    app:strokeColor="@color/orange"
+    app:strokeWidth="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="150dp"
+            android:minHeight="100dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="Hello World"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/favrt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:padding="10sp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/nav_bg"
+            android:background="@drawable/tab_bg"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_favorite_border"
+            app:tint="@color/orange" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

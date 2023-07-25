@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:background="@color/colorBackground"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="25sp"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorBackground"
+            app:titleTextColor="@color/white"
+            android:elevation="8sp"
+            app:navigationIconTint="@color/white"
+            app:title="Setting" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:layout_marginStart="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:text="Content &#38; Appearance (Live)" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/hideCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusedByDefault="true"
+            android:screenReaderFocusable="true"
+            android:defaultFocusHighlightEnabled="true"
+            android:focusableInTouchMode="false"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorBackground"
+            android:descendantFocusability="beforeDescendants"
+            android:background="@drawable/item_selector"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hide Live Categories"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/grey2"
+                        android:text="Hide channel from unwanted categories/tab"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey2" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/adjust"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusedByDefault="true"
+            android:screenReaderFocusable="true"
+            android:defaultFocusHighlightEnabled="true"
+            android:focusableInTouchMode="false"
+            app:cardBackgroundColor="@color/colorBackground"
+            android:clickable="true"
+            android:descendantFocusability="beforeDescendants"
+            android:background="@drawable/item_selector"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Live Category Tabs Arrangement"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/grey2"
+                        android:text="Set the order of LIVE tabs the way you want"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:layout_marginStart="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:text="Security &#38; Safety" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/lockSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusedByDefault="true"
+                android:screenReaderFocusable="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:focusableInTouchMode="false"
+                android:clickable="true"
+                android:descendantFocusability="beforeDescendants"
+                android:background="@drawable/item_selector"
+                app:cardBackgroundColor="@color/colorBackground"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12sp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lock Setting"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:textColor="@color/grey2"
+                            android:text="Unrestricted access granted to settings"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/lockCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/orange"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey2" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusedByDefault="true"
+                android:screenReaderFocusable="true"
+                android:defaultFocusHighlightEnabled="true"
+                android:focusableInTouchMode="false"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorBackground"
+                android:descendantFocusability="beforeDescendants"
+                android:background="@drawable/item_selector"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12sp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Password"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:textColor="@color/grey2"
+                            android:text="Set password for settings.\nDefault Password : 1234"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:layout_marginStart="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:text="Player" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/videoPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusedByDefault="true"
+            android:screenReaderFocusable="true"
+            android:defaultFocusHighlightEnabled="true"
+            android:focusableInTouchMode="false"
+            app:cardBackgroundColor="@color/colorBackground"
+            android:clickable="true"
+            android:descendantFocusability="beforeDescendants"
+            android:background="@drawable/item_selector"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Default Video Player"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/playername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/grey2"
+                        android:text="Always Ask"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey2" />
+
+    </LinearLayout>
+
+</ScrollView>
