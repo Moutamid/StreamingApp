@@ -106,7 +106,7 @@ public class ChannelsAdapter extends RecyclerView.Adapter<ChannelsAdapter.Channe
             @Override
             public boolean onLongClick(View v) {
                 String msg = holder.msg;
-                new AlertDialog.Builder(context)
+                new AlertDialog.Builder(context, R.style.AlertDialogStyle)
                         .setMessage(msg)
                         .setPositiveButton("Yes", (dialog, which) -> {
                             if (!holder.isfvrt) {

@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.fxn.stash.Stash;
 import com.moutamid.streamingapp.Constants;
+import com.moutamid.streamingapp.R;
 import com.moutamid.streamingapp.databinding.FragmentAllChannelsBinding;
 import com.moutamid.streamingapp.models.TabLocal;
 import com.moutamid.streamingapp.models.TabsModel;
@@ -59,7 +60,7 @@ public class AllChannelsFragment extends Fragment {
 
         tabs = new ArrayList<>();
 
-        progressDialog = new ProgressDialog(requireActivity());
+        progressDialog = new ProgressDialog(requireActivity(), R.style.AlertDialogStyle);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Loading...");
 

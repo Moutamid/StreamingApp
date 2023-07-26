@@ -17,7 +17,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
-        builder = new AlertDialog.Builder(this);
+        builder = new AlertDialog.Builder(this, R.style.AlertDialogStyle);
 
         builder.setMessage("Please make sure you have internet connection and try again");
         builder.setTitle("Disconnected");

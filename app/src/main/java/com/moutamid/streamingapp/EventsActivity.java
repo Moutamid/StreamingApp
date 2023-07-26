@@ -56,7 +56,7 @@ public class EventsActivity extends AppCompatActivity {
 
         tabs = new ArrayList<>();
 
-        progressDialog = new ProgressDialog(this);
+        progressDialog = new ProgressDialog(this, R.style.AlertDialogStyle);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Loading...");
 

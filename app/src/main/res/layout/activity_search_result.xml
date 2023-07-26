@@ -39,18 +39,43 @@
         android:layout_height="wrap_content"
         android:layout_margin="12sp"
         app:cardCornerRadius="8sp"
-        app:cardBackgroundColor="@color/colorBackground"
+        app:cardBackgroundColor="@color/white"
         app:cardElevation="8sp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/image"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="fitCenter" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="150dp"
+                    android:layout_marginTop="25dp"
+                    android:minHeight="70dp"
+                    android:scaleType="fitCenter" />
+
+                <ImageView
+                    android:id="@+id/favrt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:padding="10sp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/round"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_favorite_border"
+                    app:tint="@color/orange" />
+
+
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/name"
@@ -67,24 +92,10 @@
                 android:maxLines="1"
                 android:padding="10dp"
                 android:text="Hello World"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/orange"
                 android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/favrt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_gravity="end"
-                android:padding="10sp"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/nav_bg"
-                android:background="@drawable/tab_bg"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_favorite_border"
-                app:tint="@color/orange" />
-
-        </RelativeLayout>
+        </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 

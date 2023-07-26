@@ -28,6 +28,7 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.fxn.stash.Stash;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.moutamid.streamingapp.Constants;
 import com.moutamid.streamingapp.MetaRequest;
 import com.moutamid.streamingapp.R;
@@ -68,7 +69,7 @@ public class VideoPlayerDialog {
 
         channelsModelArrayList = new ArrayList<>();
 
-        progressDialog = new ProgressDialog(context);
+        progressDialog = new ProgressDialog(context, R.style.AlertDialogStyle);
         progressDialog.setCancelable(false);
         progressDialog.setTitle("Creating Your Link");
         progressDialog.setMessage("Please Wait...");
@@ -104,138 +105,138 @@ public class VideoPlayerDialog {
         mxPlayer.requestFocus();
 
         mxPlayer.setOnClickListener(v -> {
-            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey2));
             Stash.put("buttonIDDD", R.id.mxPlayer);
             Stash.put("buttonTTT", "MX Player");
 
-            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
         });
 
         xyzPlayer.setOnClickListener(v -> {
-            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey2));
             Stash.put("buttonIDDD", R.id.xyzPlayer);
             Stash.put("buttonTTT", "XYZ Player");
 
-            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
         });
 
         vlcPlayer.setOnClickListener(v -> {
-            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey2));
             Stash.put("buttonIDDD", R.id.vlcPlayer);
             Stash.put("buttonTTT", "VLC Player");
 
-            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
         });
 
         localPlayer.setOnClickListener(v -> {
-            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey2));
             Stash.put("buttonIDDD", R.id.localPlayer);
             Stash.put("buttonTTT", "LocalCast Player");
 
-            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
         });
 
         videoPlayer.setOnClickListener(v -> {
-            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey2));
             Stash.put("buttonIDDD", R.id.videoPlayer);
             Stash.put("buttonTTT", "Video Player");
 
-            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
         });
 
         wuffyPlayer.setOnClickListener(v -> {
-            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey2));
             Stash.put("buttonIDDD", R.id.wuffyPlayer);
             Stash.put("buttonTTT", "Wuffy Player");
 
-            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
         });
 
         androidPlayer.setOnClickListener(v -> {
-            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey2));
             Stash.put("buttonIDDD", R.id.androidPlayer);
             Stash.put("buttonTTT", "Android Player");
 
-            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
         });
 
         webPlayer.setOnClickListener(v -> {
-            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey2));
             Stash.put("buttonIDDD", R.id.webPlayer);
             Stash.put("buttonTTT", "Web Video Cast Player");
 
-            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
         });
 
         bubblePlayer.setOnClickListener(v -> {
-            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            bubblePlayer.setCardBackgroundColor(context.getResources().getColor(R.color.grey2));
             Stash.put("buttonIDDD", R.id.bubblePlayer);
             Stash.put("buttonTTT", "BubbleUpnP Player");
 
-            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
-            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.white));
+            mxPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            vlcPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            localPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            videoPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            wuffyPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            androidPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            webPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
+            xyzPlayer.setCardBackgroundColor(context.getResources().getColor(R.color.colorBackground));
         });
 
         justOnce.setOnClickListener(v -> {
@@ -324,7 +325,7 @@ public class VideoPlayerDialog {
 
     private void showAlert() {
         String name = Stash.getString("buttonTTT");
-        new AlertDialog.Builder(context)
+        new MaterialAlertDialogBuilder(context, R.style.AlertDialogStyle)
                 .setTitle("Important")
                 .setMessage(name + " is not installed. Click the button below to download it or select android player.")
                 .setPositiveButton("Install", (dialog, which) -> {

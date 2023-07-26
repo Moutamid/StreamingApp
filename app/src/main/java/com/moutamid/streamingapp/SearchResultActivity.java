@@ -81,7 +81,7 @@ public class SearchResultActivity extends AppCompatActivity {
         });
 
         binding.channel.setOnLongClickListener(view -> {
-            new AlertDialog.Builder(SearchResultActivity.this)
+            new AlertDialog.Builder(SearchResultActivity.this, R.style.AlertDialogStyle)
                     .setMessage("Do you want to favourite it?")
                     .setPositiveButton("Yes", (dialog, which) -> {
                         favrtList.clear();

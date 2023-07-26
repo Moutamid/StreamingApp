@@ -6,29 +6,51 @@
     android:layout_margin="6sp"
     android:background="@drawable/item_selector"
     android:clickable="true"
-    app:cardBackgroundColor="@color/tab_bg"
     android:defaultFocusHighlightEnabled="true"
     android:descendantFocusability="beforeDescendants"
     android:focusable="true"
     android:focusableInTouchMode="false"
     android:focusedByDefault="true"
     android:screenReaderFocusable="true"
-    app:cardCornerRadius="8sp"
+    app:cardCornerRadius="12sp"
     app:cardElevation="8sp"
     app:strokeColor="@color/orange"
     app:strokeWidth="0dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxHeight="150dp"
-            android:minHeight="100dp"
+            android:layout_marginTop="25dp"
+            android:minHeight="70dp"
             android:scaleType="fitCenter" />
+
+            <ImageView
+                android:id="@+id/favrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:padding="10sp"
+                android:layout_margin="10dp"
+                android:background="@drawable/round"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_favorite_border"
+                app:tint="@color/orange" />
+
+
+
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/name"
@@ -45,22 +67,8 @@
             android:maxLines="1"
             android:padding="10dp"
             android:text="Hello World"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/orange"
             android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/favrt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="end"
-            android:padding="10sp"
-            android:layout_margin="10dp"
-            android:backgroundTint="@color/nav_bg"
-            android:background="@drawable/tab_bg"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_favorite_border"
-            app:tint="@color/orange" />
-
-    </RelativeLayout>
+    </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
